@@ -15,7 +15,7 @@ export default function Home() {
     const openDeepLink = () => {
       const isAndroid = /Android/i.test(navigator.userAgent)
       const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent)
-      
+
       if (isAndroid) {
         // Android: Intent URL 사용
         const intentUrl = `intent://expo-development-client/?url=${encodeURIComponent(expoUrl)}#Intent;scheme=exp+;package=host.exp.exponent;end`
@@ -29,14 +29,14 @@ export default function Home() {
         window.open(deepLink, '_blank')
       }
     }
-    
+
     openDeepLink()
   }, [])
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
     const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent)
-    
+
     if (isIOS) {
       // iOS: Expo Universal Link를 직접 사용 (가장 확실한 방법)
       // expoUrl을 직접 사용하면 Universal Link로 작동
@@ -48,16 +48,16 @@ export default function Home() {
   }
 
   return (
-    <div style={{ 
-      display: 'flex', 
-      justifyContent: 'center', 
-      alignItems: 'center', 
+    <div style={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
       minHeight: '100vh',
       flexDirection: 'column',
       gap: '20px'
     }}>
       {showLink && (
-        <a 
+        <a
           href={expoUrl}
           onClick={handleLinkClick}
           style={{
@@ -74,7 +74,8 @@ export default function Home() {
         </a>
       )}
 
-      {/* <Image  />/ */}
+      <Image src="/qr.png" alt="App Store" width={100} height={100} />
+
     </div>
   )
 }
