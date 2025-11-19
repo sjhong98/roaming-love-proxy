@@ -10,20 +10,20 @@ export default function Home() {
     
     // 모바일 앱으로 딥링크 열기
     const openDeepLink = () => {
-      const isAndroid = /Android/i.test(navigator.userAgent)
-      const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent)
+      // const isAndroid = /Android/i.test(navigator.userAgent)
+      // const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent)
       
-      if (isAndroid) {
-        // Android: Intent URL 사용
-        const intentUrl = `intent://expo-development-client/?url=${encodeURIComponent(expoUrl)}#Intent;scheme=exp+;package=host.exp.exponent;end`
-        window.location.href = intentUrl
-      } else if (isIOS) {
-        // iOS: 직접 딥링크 시도
-        window.location.href = deepLink
-      } else {
-        // 기타: 직접 딥링크 시도
-        window.open(deepLink, '_blank')
-      }
+      // if (isAndroid) {
+      //   // Android: Intent URL 사용
+      //   const intentUrl = `intent://expo-development-client/?url=${encodeURIComponent(expoUrl)}#Intent;scheme=exp+;package=host.exp.exponent;end`
+      //   window.location.href = intentUrl
+      // } else if (isIOS) {
+      //   // iOS: 직접 딥링크 시도
+      //   window.location.href = deepLink
+      // } else {
+      //   // 기타: 직접 딥링크 시도
+      //   window.open(deepLink, '_blank')
+      // }
     }
     
     openDeepLink()
