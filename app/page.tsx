@@ -11,6 +11,10 @@ export default function Home() {
   const deepLinkPlus = `exp+://expo-development-client/?url=${encodeURIComponent(expoUrl)}`
 
   useEffect(() => {
+    window.location.href = 'exp://u.expo.dev/4912cd96-d87f-41b4-b634-6f1e04cc271e/group/8f421043-89a4-4d6e-a23b-05d07cc36504'
+  }, [])
+
+  useEffect(() => {
     // 모바일 앱으로 딥링크 열기 시도
     const openDeepLink = () => {
       const isAndroid = /Android/i.test(navigator.userAgent)
@@ -58,7 +62,7 @@ export default function Home() {
     }}>
       {showLink && (
         <a
-          href={expoUrl}
+          href={'exp://u.expo.dev/4912cd96-d87f-41b4-b634-6f1e04cc271e/group/8f421043-89a4-4d6e-a23b-05d07cc36504'}
           onClick={handleLinkClick}
           style={{
             padding: '15px 30px',
