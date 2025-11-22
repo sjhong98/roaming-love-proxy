@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react"
 
 export default function Home() {
-  const expoUrl = 'exp://u.expo.dev/4912cd96-d87f-41b4-b634-6f1e04cc271e/group/9d591d77-3cad-4827-ad90-297cbc661de8'
+  const expoUrl = 'exp://u.expo.dev/4912cd96-d87f-41b4-b634-6f1e04cc271e/group/94f83482-59f8-400f-bc1e-7d2c543518d9'
   const hasTriedAppStore = useRef(false)
   const redirectTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
 
